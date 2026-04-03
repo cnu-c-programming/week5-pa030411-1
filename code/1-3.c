@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void print_reverse(int *arr, int size) {
+    int *ptr = arr + size - 1;
+
+    while (ptr >= arr) {
+        printf("%d", *ptr);
+        if (ptr > arr) {
+            printf(" ");
+        }
+        ptr--;
+    }
+}
+
+int main(void) {
+    int nums[] = {1, 2, 3, 4, 5};
+
+    print_reverse(nums, 5);
+    printf("\n");
+
+    return 0;
+}
